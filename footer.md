@@ -1,3 +1,3 @@
 ## To-do List
 
-- Verificar por que o output _id_ está retorando o __nome__ da chave e não o _id_ de fato.
+- Verificar por que o output id está retorando o nome da chave e não o id de fato.

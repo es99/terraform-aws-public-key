@@ -1,4 +1,15 @@
+## keypair
+### Cria um par de chaves na AWS com base na chave pública do cliente.
+
 <!-- BEGIN_TF_DOCS -->
+Exemplo de uso:
+```hcl
+resource "aws_key_pair" "deployer" {
+  key_name   = var.name
+  public_key = var.chave_publica
+}
+```
+
 ## Requirements
 
 | Name | Version |
@@ -38,5 +49,5 @@ No modules.
 
 ## To-do List
 
-- Verificar por que o output _id\_ está retorando o \_\_nome\_\_ da chave e não o \_id_ de fato.
+- Verificar por que o output id está retorando o nome da chave e não o id de fato.
 <!-- END_TF_DOCS -->

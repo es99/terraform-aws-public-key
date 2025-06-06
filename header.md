@@ -1,0 +1,7 @@
+Exemplo de uso: 
+```hcl
+resource "aws_key_pair" "deployer" {
+  key_name   = var.name
+  public_key = var.chave_publica
+}
+```

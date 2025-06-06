@@ -2,7 +2,7 @@ formatter: "markdown" # this is required
 
 version: "0.20.0"
 
-header-from: keypair.tf
+header-from: header.md
 footer-from: footer.md
 
 recursive:
