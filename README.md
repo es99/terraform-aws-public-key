@@ -1,15 +1,20 @@
-# public\_key
-### Cria um par de chaves, ou seja, transfere a chave pública para a AWS e espera que o usuário que vá acessar a instância tenha a chave privada correspondente.
+<!-- BEGIN_TF_DOCS -->
+## Requirements
 
-Exemplo de uso:
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.9 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 5.0 |
 
-```hcl
-module "keypair" {
-  source        = "git::git@gitlab.com:iac5395220/modules/aws/public_key.git"
-  chave_publica = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN+kIkWSb0pJ2r/FU/ckt0Kl4erRdZefh2C5IXktvYMq engels.souza"
-  name          = var.keypair_name
-}
-```
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.99.1 |
+
+## Modules
+
+No modules.
 
 ## Resources
 
@@ -30,3 +35,8 @@ module "keypair" {
 |------|-------------|
 | <a name="output_id"></a> [id](#output\_id) | Retorna o id do keypair. |
 | <a name="output_keyname"></a> [keyname](#output\_keyname) | O nome da chave. |
+
+## To-do List
+
+- Verificar por que o output _id\_ está retorando o \_\_nome\_\_ da chave e não o \_id_ de fato.
+<!-- END_TF_DOCS -->
