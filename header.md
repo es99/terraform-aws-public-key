@@ -1,4 +1,7 @@
+# public_key
 ### Cria um par de chaves, ou seja, transfere a chave pública para a AWS e espera que o usuário que vá acessar a instância tenha a chave privada correspondente.
+
+Exemplo de uso:
 
 ```hcl
 module "keypair" {
