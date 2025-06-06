@@ -1,0 +1,16 @@
+formatter: markdown table
+#version: "0.20.0"
+output-file: README.md
+output-mode: inject
+header-from: header.md
+footer-from: footer.md
+sections:
+  hide: []
+  show:
+   - header
+   - inputs
+   - outputs
+   - resources
+sort:
+  enable: true
+  by: required
