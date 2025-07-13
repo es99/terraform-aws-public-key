@@ -1,6 +1,3 @@
-## keypair
-### Cria um par de chaves na AWS com base na chave pública do cliente.
-
 <!-- BEGIN_TF_DOCS -->
 Exemplo de uso:
 ```hcl
