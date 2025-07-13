@@ -26,3 +26,4 @@ jobs:
             output-method: inject
             git-push: "false"
             fail-on-diff: "true"
+            config-file: .config/.terraform-docs.yml
