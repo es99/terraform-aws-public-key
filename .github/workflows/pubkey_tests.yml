@@ -1,0 +1,25 @@
+name: Testando módulo Terraform
+run-name: ${{ github.actor }} iniciou o teste do módulo terraform.
+on:
+    push:
+jobs:
+    tfsec_fmt:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+
+        - name: Latest version of Terraform Install
+          uses: hashicorp/setup-terraform@v3
+
+        - name: Terraform init
+          run: terraform init
+
+        - name: Check Terraform formatting
+          run: terraform fmt -recursive -check
+
+        - name: TFSec install
+          run: curl -s https://raw.githubusercontent.com/aquasecurity/tfsec/master/scripts/install_linux.sh | bash
+
+        - name: TFSec running
+          run: tfsec .

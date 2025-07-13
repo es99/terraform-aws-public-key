@@ -4,6 +4,6 @@ output "id" {
 }
 
 output "keyname" {
-  description = "O nome da chave."
+  description = "Retorna o nome da chave pública."
   value       = aws_key_pair.deployer.key_name
 }
