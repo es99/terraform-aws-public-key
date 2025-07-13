@@ -3,7 +3,7 @@ run-name: ${{ github.actor }} iniciou o teste do módulo terraform.
 on:
     push:
 jobs:
-    tfsec:
+    linter:
         runs-on: ubuntu-latest
         steps:
         - name: Checkout
@@ -14,6 +14,9 @@ jobs:
 
         - name: Terraform init
           run: terraform init
-          
+
         - name: Check Terraform formatting
           run: terraform fmt -recursive -check
+
+        - name: Terraform docs
+          run: terraform-docs .

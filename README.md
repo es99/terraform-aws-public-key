@@ -6,7 +6,7 @@ Exemplo de uso:
 ```hcl
 module "keypair" {
   source        = "git::git@gitlab.com:iac5395220/modules/aws/public_key.git"
-  chave_publica = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN+kIkWSb0pJ2r/FU/ckt0Kl4erRdZefh2C5IXktvYMq engels.souza"
+  chave_publica = "<here: your public key>"
 }
 ```
 
@@ -49,6 +49,5 @@ No modules.
 
 ## To-do List
 
-- Verificar por que o output id está retorando o nome da chave e não o id de fato.
 - Automatizar de alguma forma o terraform-docs para não ter que executar o comando todas as vezes antes de um commit.
 <!-- END_TF_DOCS -->
