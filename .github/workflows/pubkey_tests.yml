@@ -1,0 +1,14 @@
+name: Testando módulo Terraform
+run-name: ${{ github.actor }} iniciou o teste do módulo terraform.
+on:
+    push:
+jobs:
+    tfsec:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+        - name: Terraform init
+          run: terraform init
+        - name: Check Terraform formatting
+          run: terraform fmt -recursive -check
