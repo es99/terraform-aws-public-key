@@ -8,7 +8,12 @@ jobs:
         steps:
         - name: Checkout
           uses: actions/checkout@v4
+
+        - name: Latest version of Terraform Install
+          uses: hashicorp/setup-terraform@v3
+
         - name: Terraform init
           run: terraform init
+          
         - name: Check Terraform formatting
           run: terraform fmt -recursive -check
