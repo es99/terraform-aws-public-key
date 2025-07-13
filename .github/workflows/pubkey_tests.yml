@@ -23,6 +23,3 @@ jobs:
 
         - name: TFSec running
           run: tfsec .
-
-        - name: Mostrando arquivos do workdir
-          run: ls -lha
