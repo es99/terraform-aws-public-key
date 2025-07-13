@@ -18,5 +18,10 @@ jobs:
         - name: Check Terraform formatting
           run: terraform fmt -recursive -check
 
-        - name: Terraform docs
-          run: terraform-docs .
+        - name: Render terraform docs inside README.md
+          uses: terraform-docs/gh-actions@v1.4.1
+          with:
+            working-dir: .
+            output-file: README.md
+            output-method: inject
+            git-push: "true"
