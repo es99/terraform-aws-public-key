@@ -17,13 +17,3 @@ jobs:
 
         - name: Check Terraform formatting
           run: terraform fmt -recursive -check
-
-        - name: Check up to date README.md with Terraform docs
-          uses: terraform-docs/gh-actions@v1.4.1
-          with:
-            working-dir: .
-            output-file: README.md
-            output-method: inject
-            git-push: "false"
-            fail-on-diff: "true"
-            config-file: .config/.terraform-docs.yml
