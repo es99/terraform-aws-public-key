@@ -18,7 +18,7 @@ jobs:
         - name: Check Terraform formatting
           run: terraform fmt -recursive -check
 
-        - name: Render terraform docs inside README.md
+        - name: Check up to date README.md with Terraform docs
           uses: terraform-docs/gh-actions@v1.4.1
           with:
             working-dir: .
