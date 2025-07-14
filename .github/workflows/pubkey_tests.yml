@@ -1,13 +1,13 @@
-name: Testando módulo Terraform
-run-name: ${{ github.actor }} iniciou o teste do módulo terraform.
+name: Segurança, formatação e documentação
+run-name: ${{ github.actor }} inicou testes de segurança, formatação e documentação
 on:
     pull_request:
 
 permissions:
     contents: write
-    
+
 jobs:
-    tfsec_fmt:
+    tfsec_fmt_docs:
         runs-on: ubuntu-latest
         steps:
         - name: Checkout
