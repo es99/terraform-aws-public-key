@@ -18,8 +18,7 @@ jobs:
         - name: Check Terraform formatting
           run: terraform fmt -recursive -check
 
-        - name: TFSec install
-          run: curl -s https://raw.githubusercontent.com/aquasecurity/tfsec/master/scripts/install_linux.sh | bash
-
-        - name: TFSec running
-          run: tfsec .
+        - name: tfsec
+          uses: aquasecurity/tfsec-pr-commenter-action@v1.2.0
+          with:
+            github_token: ${{ github.token }}
