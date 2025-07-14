@@ -22,3 +22,12 @@ jobs:
           uses: aquasecurity/tfsec-pr-commenter-action@v1.2.0
           with:
             github_token: ${{ github.token }}
+
+        - name: Atualiza README com terraform-docs
+          uses: terraform-docs/gh-actions@v1.4.1
+          with:
+            working-dir: .
+            output-file: README.md
+            output-method: inject
+            config-file: .config/.terraform-docs.yml
+            git-push: true
