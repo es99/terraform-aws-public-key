@@ -41,8 +41,8 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_id"></a> [id](#output\_id) | Retorna o id do keypair. |
-| <a name="output_keyname"></a> [keyname](#output\_keyname) | Retorna o nome da chave pública. |
+| <a name="output_id"></a> [id](#output\_id) | Keypair Id. |
+| <a name="output_keyname"></a> [keyname](#output\_keyname) | Pubkey name. |
 
 ## To-do List
 
